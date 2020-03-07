@@ -9,6 +9,7 @@ class algo {
         char cOperador;
         string sNum2;
 
+        //length of string
         int iNum1;
         int iNum2;
 
