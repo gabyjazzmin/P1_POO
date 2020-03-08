@@ -1,8 +1,17 @@
 #include <iostream>
 using namespace std;
 #include "algo.h"
+#include <fstream>
+#include <string.h> 
 
-int main() {
+void lectura(){
+  ifstream archEntrada;
+  ofstream archSalida;
+
+  archEntrada.open("entrada.txt");
+  archSalida.open("salida.txt");
+
+while(!archEntrada.eof()){
     string numero1, numero2;
     char operador;
 
@@ -11,8 +20,16 @@ int main() {
       cin >> operador;
       cin >> numero2;
 
-      algo Algo(numero1, operador, numero2);
-      cout << Algo.convertir() << endl;
-    }
-    
+      algo algo(numero1, operador, numero2);
+      cout  << algo.convertir() << endl;
+   }
+  
+  }
+  archEntrada.close();
+  archSalida.close();
+}
+int main() {
+
+  lectura();
+  return 0;
 }
