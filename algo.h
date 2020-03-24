@@ -7,12 +7,10 @@ using namespace std;
 class algo {
     private:
         string sDefinition;
-        /*string sNum1;
-        string cOperador;
-        string sNum2;*/
+
         string numeroEnClave;
 
-        //length of string
+
         int iNum1;
         int iNum2;
 
@@ -22,37 +20,13 @@ class algo {
         double convertir();
 };
 
-/*algo::algo(string sN1, string cO, string sN2) {
-    sNum1 = sN1;
-    cOperador = cO;
-    sNum2 = sN2;
-
-    iNum1 = 0;
-    iNum2 = 0;
-}*/
 algo::algo(string _numeroEnClave, string _sDefinition) {
     numeroEnClave=_numeroEnClave;
     sDefinition=_sDefinition;
 }
 
 double algo:: convertir(){
-  /*int iNewsDefinition;
-   while(!entrada.eof()){
-   getline(entrada, sDefinition);
-    for(int i = 0; i<sDefinition.length(); i++){
-     //aqui se cambia la definicion de valores de string a enteros
-     iNewsDefinition[i] = stoi(sDefinition);
-
-
-   }
-}  */
-  /*
-  int iNewSN1, iNewcO, iNewSN2;
-
-  iNewSN1 = stoi(sN1);
-  iNewCO = stoi(cO);
-  iNewSN2 = stoi()
-*/ 
+ 
 int num1, num2=0;
 string sNum1, sNum2; 
 char operacion;
