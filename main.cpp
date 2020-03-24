@@ -1,8 +1,9 @@
 #include <iostream>
-using namespace std;
 #include "algo.h"
 #include <fstream>
 #include <string.h> 
+#include <stdlib.h>
+using namespace std;
 
 void lectura(){
   ifstream archEntrada;
@@ -10,24 +11,30 @@ void lectura(){
 
   archEntrada.open("entrada.txt");
   archSalida.open("salida.txt");
-
+  int cont=0;
+  string clave;
+  string sTodos;
 while(!archEntrada.eof()){
-    string numero1, numero2;
-    char operador;
-
-    for (int i = 0; i < 5; ++i) {
-      cin >> numero1;
-      cin >> operador;
-      cin >> numero2;
-
-      algo algo(numero1, operador, numero2);
-      cout  << algo.convertir() << endl;
-   }
+  getline(archEntrada,sTodos);
   
+  if(cont<1){
+      for(int x=0; x<sTodos.length(); x++){
+        if(sTodos[x]!=' ')
+          clave+=sTodos[x];
+      }
   }
-  archEntrada.close();
+  else{
+  algo Algo(sTodos, clave);
+  cout<<Algo.convertir()<<endl;
+  archSalida << Algo.convertir()<<endl;
+  }
+ cont++;
+}
+
+ archEntrada.close();
   archSalida.close();
 }
+
 int main() {
 
   lectura();
